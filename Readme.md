@@ -11,9 +11,9 @@
 
 **Steps to build the App for mobile device**
 
-    For Android: Follow https://ionicframework.com/docs/developing/android	  
+    For Android:  https://ionicframework.com/docs/developing/android	  
                                                                                          
-    For iOS : Follow https://ionicframework.com/docs/developing/ios
+    For iOS :  https://ionicframework.com/docs/developing/ios
     
 **Screenshots**
 
