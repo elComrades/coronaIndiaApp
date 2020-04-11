@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>recipes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!--    <ion-list>-->
+<!--        <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe"></app-recipe-item>-->
+<!--    </ion-list>-->
+<ion-spinner color="danger" *ngIf="isLoading"></ion-spinner>
+    <ion-button color="danger" *ngIf="!isLoading" (click)="load()">Submit</ion-button>
+</ion-content>
