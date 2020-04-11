@@ -9,6 +9,8 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+import {LatestDashboardDataService} from "./providers/latest-dashboard-data.service";
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,11 +19,13 @@ import {FormsModule} from '@angular/forms';
         BrowserModule,
         IonicModule.forRoot(),
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
     providers: [
         StatusBar,
         SplashScreen,
+        LatestDashboardDataService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]
