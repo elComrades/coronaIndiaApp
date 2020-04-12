@@ -5,6 +5,7 @@ import {AlertController, LoadingController} from '@ionic/angular';
 import {Router} from '@angular/router';
 
 import {ApiDataService} from '../../providers/api-data.service';
+import {GraphRenderService} from "../../providers/graph-render.service";
 
 @Component({
     selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomePage {
 
     // tslint:disable-next-line:variable-name
     constructor(private _apiDataService: ApiDataService,
+                private _graphRenderService: GraphRenderService,
                 private loadingCtrl: LoadingController,
                 private alertCtrl: AlertController,
                 private router: Router) {
@@ -39,6 +41,11 @@ export class HomePage {
         if (!this.isLoadingData) {
             await this.loadingCtrl.dismiss();
         }
+    }
+
+    ionViewDidEnter() {
+        const el = document.getElementById('pieChart');
+        this._graphRenderService.pieChartBrowser(el);
     }
 
     UpdateDashboardCards(data) {

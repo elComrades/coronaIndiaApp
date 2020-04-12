@@ -20,15 +20,20 @@
 
         .subtitle {
           padding-top: 10px;
+          //padding-left: -10px;
           font-weight: normal;
+          letter-spacing:1px ;
+          text-overflow: ellipsis;
+          overflow-x: hidden;
         }
+
 
         img {
           width: 20%;
           max-width: 50px;
           position: absolute;
-          bottom: 30px !important;
-          right: 8px;
+          bottom: 2px !important;
+          right: 2px;
         }
       }
     }

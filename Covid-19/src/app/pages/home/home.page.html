@@ -10,7 +10,7 @@
 <ion-content>
     <ion-grid class="dashboard-grid">
         <ion-row class="ion-justify-content-evenly dashboard-card-row">
-            <ion-col *ngFor="let item  of dashboardCards" sizeXs="8.5" sizeSm="2" size-md="2"
+            <ion-col *ngFor="let item  of dashboardCards" sizeXs="5.7" sizeSm="2" size-md="2"
                      class="dashboard-card-col">
                 <ion-card class="dashboard-card ion-activatable ripple-parent" [color]="item.color">
                     <ion-ripple-effect></ion-ripple-effect>
@@ -24,5 +24,32 @@
                 </ion-card>
             </ion-col>
         </ion-row>
+
+        <ion-row>
+            <ion-col>
+<!--                                <ion-card>-->
+<!--                                    <ion-card-header>-->
+<!--                                        <ion-card-title>Pie Chart - Browser market</ion-card-title>-->
+<!--                                    </ion-card-header>-->
+<!--                                    <ion-card-content>-->
+<!--                                        <div id="pieChart" style="width:inherit; height:400px;"></div>-->
+<!--                                    </ion-card-content>-->
+<!--                                </ion-card>-->
+                <div id="pieChart" style="width:inherit; height:400px;"></div>
+            </ion-col>
+        </ion-row>
     </ion-grid>
+<!--                <ion-col>-->
+<!--                <ion-card>-->
+<!--                    <ion-card-header>-->
+<!--                        <ion-card-title>Pie Chart - Browser market</ion-card-title>-->
+<!--                    </ion-card-header>-->
+<!--                    <ion-card-content>-->
+<!--                        <div id="pieChart" style="width:inherit; height:200px;"></div>-->
+<!--                    </ion-card-content>-->
+<!--                </ion-card>-->
+<!--                </ion-col>-->
+<!--            </ion-row>-->
+
+<!--    </ion-grid>-->
 </ion-content>

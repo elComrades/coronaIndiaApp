@@ -11,6 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {LatestDashboardDataService} from './providers/latest-dashboard-data.service';
+import {GraphRenderService} from "./providers/graph-render.service";
 
 @NgModule({
     declarations: [AppComponent],
@@ -26,6 +27,7 @@ import {LatestDashboardDataService} from './providers/latest-dashboard-data.serv
         StatusBar,
         SplashScreen,
         LatestDashboardDataService,
+        GraphRenderService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]
