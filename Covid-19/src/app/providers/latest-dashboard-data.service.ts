@@ -5,11 +5,16 @@ import {HttpClient} from '@angular/common/http';
     providedIn: 'root'
 })
 export class LatestDashboardDataService {
-    public loadedData ;
+    public loadedData;
+
     constructor(private http: HttpClient) {
     }
 
     getLatestData() {
         return this.http.get('https://api.rootnet.in/covid19-in/stats/latest');
+    }
+
+    getHistoricalData() {
+        return this.http.get('https://api.rootnet.in/covid19-in/stats/history');
     }
 }

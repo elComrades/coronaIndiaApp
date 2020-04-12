@@ -8,17 +8,27 @@
 </ion-header>
 
 <ion-content>
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-card>
+<ion-grid class="dashboard-grid">
+  <ion-row class="ion-justify-content-evenly dashboard-card-row">
+<!--    <ion-col>-->
+<!--      <ion-card>-->
+<!--        <ion-card-header>-->
+<!--          <ion-card-title>Card Title</ion-card-title>-->
+<!--          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+<!--        </ion-card-header>-->
+<!--        <ion-card-content>-->
+<!--        </ion-card-content>-->
+<!--      </ion-card>-->
+<!--    </ion-col>-->
+    <ion-col *ngFor="let item  of dashboardCards" sizeXs="8" sizeSm="2" size-md="2" class="dashboard-card-col">
+      <ion-card class="dashboard-card ion-activatable ripple-parent" [color]="item.color">
+        <ion-ripple-effect></ion-ripple-effect>
         <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <ion-card-title class="title">{{item.value}}</ion-card-title>
+          <ion-card-subtitle class="subtitle">{{item.category}}</ion-card-subtitle>
         </ion-card-header>
-
         <ion-card-content>
-
+          <img [src]="'assets/img/card-icons/'+item.icon">
         </ion-card-content>
       </ion-card>
     </ion-col>
