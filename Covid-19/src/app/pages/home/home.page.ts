@@ -62,7 +62,7 @@ export class HomePage {
             ActiveCases: parseInt(latestSummary.confirmedCasesIndian) + parseInt(latestSummary.confirmedCasesForeign) - parseInt(latestSummary.discharged) - parseInt(latestSummary.deaths),
             TotalDeaths: latestSummary.deaths,
             CuredCases: latestSummary.discharged,
-            FatalityRate: ((latestSummary.deaths / latestSummary.total) * 100).toFixed(2),
+            FatalityRate: ((latestSummary.deaths / latestSummary.total) * 100).toFixed(2) +' %',
             LastOneWeekCases: historicData[historicDataSize - 1].summary.total - historicData[historicDataSize - 8].summary.total
         };
     }
