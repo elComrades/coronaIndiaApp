@@ -1,8 +1,6 @@
 .dashboard-grid {
   //margin-top: 20%;
   height: 80%;
-
-
   .dashboard-card-row {
     height: 80%;
 
@@ -14,6 +12,7 @@
         margin: auto !important;
         padding: 0 !important;
         text-transform: none;
+        border-radius: 1rem;
 
         .title {
           font-size: 1.5rem;

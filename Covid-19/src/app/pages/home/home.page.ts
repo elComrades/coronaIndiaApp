@@ -73,13 +73,13 @@ export class HomePage {
                 category: 'Total Cases',
                 value: this.extractedData.TotalCases,
                 icon: 'totalcase.svg',
-                color: 'primary'
+                color: 'secondary'
             },
             {
                 category: 'Active Cases',
                 value: this.extractedData.ActiveCases,
                 icon: 'activecase.svg',
-                color: 'secondary'
+                color: 'tertiary'
             },
             {
                 category: 'Last 7 days',
