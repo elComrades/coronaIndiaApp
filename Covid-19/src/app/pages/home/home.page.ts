@@ -5,7 +5,7 @@ import {AlertController, LoadingController} from '@ionic/angular';
 import {Router} from '@angular/router';
 
 import {ApiDataService} from '../../providers/api-data.service';
-import {GraphRenderService} from "../../providers/graph-render.service";
+import {GraphRenderService} from '../../providers/graph-render.service';
 
 @Component({
     selector: 'app-home',
@@ -38,15 +38,18 @@ export class HomePage {
         this.basicData = this._apiDataService.getBasicDashboardData();
         this.UpdateDashboardCards(this.basicData);
         this.isLoadingData = false;
+        const el = document.getElementById('pieChart');
+        const pieChartData = [
+            {name: 'Total Active Cases', y: this.basicData.TotalCases, sliced: true, selected: true},
+            {name: 'Total Cured', y: this.basicData.CuredCases},
+            {name: 'Total Deaths', y: this.basicData.TotalDeaths},
+        ];
+        this._graphRenderService.pieChartBrowser(el, pieChartData, 'Cases 2019-nCoV');
         if (!this.isLoadingData) {
             await this.loadingCtrl.dismiss();
         }
     }
 
-    ionViewDidEnter() {
-        const el = document.getElementById('pieChart');
-        this._graphRenderService.pieChartBrowser(el);
-    }
 
     UpdateDashboardCards(data) {
         this.dashboardCards = [
