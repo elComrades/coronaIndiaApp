@@ -2,6 +2,7 @@
   "appId": "io.ionic.starter",
   "appName": "Covid-19",
   "bundledWebRuntime": false,
+  "linuxAndroidStudioPath":"/home/praveen/Apps/android-studio/bin/android.sh",
   "npmClient": "npm",
   "webDir": "www",
   "cordova": {}
